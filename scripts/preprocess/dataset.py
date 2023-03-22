@@ -110,7 +110,7 @@ def get_weighted_dataloader(
     image_location=None,
     text_desc_location=None,
     transform=None,
-    subset_size=10000,
+    subset_size=20000,
     batch_size=64,
 ):
     """
