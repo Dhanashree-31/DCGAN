@@ -41,7 +41,7 @@ class ImageTextDataset(torch.utils.data.Dataset):
         img_name = os.path.join(self.root_dir, self.text_df.iloc[idx, 0])
         image = Image.open(img_name)
 
-        true_text = self.text_df.iloc[idx, 1:].values[0]
+        true_text = random.choice(self.text_df.iloc[idx, 1:].values[0].split('\n')).strip()
 
         if self.transform:
             true_image = self.transform(image)
